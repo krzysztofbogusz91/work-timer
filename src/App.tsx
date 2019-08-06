@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import MainLayoutComponent from './components/main-layout-component';
+import MainLayoutComponent from './components/layout/main-layout.component';
 
 const App: React.FC = () => {
   const props = {
