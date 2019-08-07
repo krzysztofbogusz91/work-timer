@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import './work-setter.component.scss'
 
-export default class WorkSetterComponent extends Component {
+type SetterProps = {
+    setTime: any;
+}
+
+export default class WorkSetterComponent extends Component<SetterProps> {
     state: any;
-    constructor(props: any) {
+    time = "08:00:00"
+    constructor(props: SetterProps) {
         super(props)
 
     }
@@ -14,9 +19,9 @@ export default class WorkSetterComponent extends Component {
             <div className="setter">
                 <form>
                     <label> Ustaw czas pracy:
-                        <input type="text" name="data" value="08:00:00" />
+                        <input type="text" name="data" value={this.time} />
                     </label>
-                    <input type="submit" value="Ustaw" />
+                    <button value="08:00:00" onClick={this.props.setTime} type="button">Ustaw</button>
                 </form>
             </div >
         )

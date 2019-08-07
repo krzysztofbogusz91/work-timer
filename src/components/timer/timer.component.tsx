@@ -24,7 +24,7 @@ export default class TimerComponent extends Component {
         const date = new Date();
         return (
             <div className="timer">
-                <h2 style={{ fontSize: '120px' }}> Time:  {this.state.date.toLocaleTimeString()} </h2>
+                <h2 style={{ fontSize: '40px' }}> Time:  {this.state.date.toLocaleTimeString()} </h2>
             </div >
         )
     }
