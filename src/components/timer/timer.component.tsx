@@ -17,10 +17,12 @@ export default class TimerComponent extends Component<TimerProps> {
         }
     }
 
-    startTimer() {
+    startTimer(tt: any) {
+        console.log(tt);
+        
+
         this.timer(60 * 5)
         this.timerTick = setInterval(() => this.tick(), 1000)
-
     }
 
 
