@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import './timer.component.scss'
-
-export default class TimerComponent extends Component {
+type TimerProps = {
+    time: any;
+}
+export default class TimerComponent extends Component<TimerProps> {
     state: any;
     timerTick: any;
     constructor(props: any) {
@@ -14,14 +16,13 @@ export default class TimerComponent extends Component {
             seconds: null
         }
     }
-    componentDidMount() {
+
+    startTimer() {
         this.timer(60 * 5)
         this.timerTick = setInterval(() => this.tick(), 1000)
-    }
-
-    componentWillUnmount() {
 
     }
+
 
     timer(duration: any) {
         const time = () => {
@@ -54,6 +55,7 @@ export default class TimerComponent extends Component {
     render() {
         return (
             <div className="timer">
+                <p>Props: {this.props.time}</p>
                 <p>dif: {this.state.difference}</p>
                 <p>min: {this.state.minutes}</p>
                 <p>sec: {this.state.seconds}</p>

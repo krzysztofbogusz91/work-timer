@@ -21,7 +21,7 @@ export default class WorkSetterComponent extends Component<SetterProps> {
                     <label> Ustaw czas pracy:
                         <input type="text" name="data" value={this.time} />
                     </label>
-                    <button value="08:00:00" onClick={this.props.setTime} type="button">Ustaw</button>
+                    <button value={this.time} onClick={this.props.setTime} type="button">Ustaw</button>
                 </form>
             </div >
         )
